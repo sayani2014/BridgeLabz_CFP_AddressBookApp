@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Providing pattern for the log message. Pattern is defined by me in the encoder which is used by the
+                 ConsoleAppender.
+                 Pattern : {Date and Time} [level of the log] [which thread is being executed since we are in multi
+                            threading environment] [logger that is logging this, hence getting the classname and also
+                            for which line the log message was there] message and end with a new line
+            -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%thread] [%logger:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- Define a logger -->
+    <!-- 5 log levels - TRACE, DEBUG, INFO, WARN, ERROR -->
+    <!-- If the level is at the framework level, then any INFO level log would be checked -->
+    <logger name="org.springframework" level="INFO" />
+    <!-- TRACE being the lowest level; any logging at the level of TRACE, it will print it in the console -->
+    <logger name="com.bridgelabz" level="TRACE" />
+    <root>
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
