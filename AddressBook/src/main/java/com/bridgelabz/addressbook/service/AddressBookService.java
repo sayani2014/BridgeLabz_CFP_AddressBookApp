@@ -1,21 +1,22 @@
 package com.bridgelabz.addressbook.service;
 
-import com.bridgelabz.addressbook.AddressBookApplication;
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import com.bridgelabz.addressbook.entity.AddressBook;
+import com.bridgelabz.addressbook.exception.AddressBookException;
 import com.bridgelabz.addressbook.repository.AddressBookRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 public class AddressBookService {
-    public static final Logger logger = LoggerFactory.getLogger(AddressBookService.class);
+//    public static final Logger logger = LoggerFactory.getLogger(AddressBookService.class);
 
     @Autowired
     private AddressBookRepository addressBookRepository;
@@ -23,53 +24,91 @@ public class AddressBookService {
     @Autowired
     private ModelMapper modelMapper;
 
+    /**
+     * Purpose : Ability to add person details in Address Book
+     * @param addressBookDTO
+     * @return
+     */
+
     public AddressBookDTO addAddressDetails(AddressBookDTO addressBookDTO) {
-        logger.debug("Inside addAddressDetails()");
+        log.info("Inside addAddressDetails()");
         AddressBook addressBookRequest = modelMapper.map(addressBookDTO, AddressBook.class);
         addressBookRepository.save(addressBookRequest);
         return addressBookDTO;
     }
 
+    /**
+     * Purpose : Ability to fetch all person details from Address Book
+     * @return
+     */
+
     public List<AddressBookDTO> getAddressDetails() {
-        logger.debug("Inside getAddressDetails()");
+        log.info("Inside getAddressDetails()");
         return addressBookRepository.findAll().stream().map(addressBook -> {
             return new AddressBookDTO(addressBook.getId(), addressBook.getName(), addressBook.getAddress(),
                                                                 addressBook.getPhoneNo(), addressBook.getEmail());
             }).collect(Collectors.toList());
     }
 
+    /**
+     * Purpose : Ability to fetch person details from Address Book using ID
+     * @param id
+     * @return
+     */
+
     public AddressBookDTO getAddressDetailsByID(int id) {
-        logger.debug("Inside getAddressDetailsByID()");
+        log.info("Inside getAddressDetailsByID()");
         AddressBook addressBook = findAddressBookById(id);
         AddressBookDTO addressBookResponse = modelMapper.map(addressBook, AddressBookDTO.class);
         return addressBookResponse;
     }
 
+    /**
+     * Purpose : Ability to find person details from Address Book using ID
+     * @param id
+     * @return
+     */
+
     private AddressBook findAddressBookById(int id) {
-        logger.debug("Inside findAddressBookById()");
+        log.info("Inside findAddressBookById()");
         return addressBookRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Unable to find any address book detail!"));
+                .orElseThrow(() -> new AddressBookException("Unable to find any address book detail!"));
     }
 
+    /**
+     * Purpose : Ability to update person details in Address Book using ID
+     * @param id
+     * @param addressBookDTO
+     * @return
+     */
+
     public AddressBookDTO updateAddressDetails(int id, AddressBookDTO addressBookDTO) {
-        logger.debug("Inside updateAddressDetails()");
-        AddressBook addressBookRequest = modelMapper.map(addressBookDTO, AddressBook.class);
+        log.info("Inside updateAddressDetails()");
         AddressBookDTO addressBookResponse = null;
-        if (id != 0) {
+        if (id > 0) {
             AddressBook addressBookDetails = findAddressBookById(id);
-            addressBookDetails.setAddress(addressBookRequest.getAddress());
-            addressBookDetails.setPhoneNo(addressBookRequest.getPhoneNo());
-            addressBookDetails.setEmail(addressBookRequest.getEmail());
+            String[] ignoreFields = {"id", "name"};
+            BeanUtils.copyProperties(addressBookDTO, addressBookDetails, ignoreFields);
             addressBookRepository.save(addressBookDetails);
             addressBookResponse = modelMapper.map(addressBookDetails, AddressBookDTO.class);
         }
         return addressBookResponse;
     }
 
-    public String deleteAddressDetails(int id) {
-        logger.debug("Inside deleteAddressDetails()");
-        AddressBook addressBook = findAddressBookById(id);
-        addressBookRepository.delete(addressBook);
-        return "Address Book deleted successfully";
+    /**
+     * Purpose : Ability to delete person details from Address Book using ID
+     * @param id
+     * @return
+     */
+
+    public AddressBookDTO deleteAddressDetails(int id) {
+        log.info("Inside deleteAddressDetails()");
+        AddressBookDTO addressBookResponse = null;
+        if (id > 0) {
+            AddressBook addressBook = findAddressBookById(id);
+            addressBookRepository.delete(addressBook);
+            addressBookResponse = modelMapper.map(addressBook, AddressBookDTO.class);
+        }
+        return addressBookResponse;
     }
 }

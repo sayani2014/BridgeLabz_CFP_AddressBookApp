@@ -1,23 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <!-- Providing pattern for the log message. Pattern is defined by me in the encoder which is used by the
-                 ConsoleAppender.
-                 Pattern : {Date and Time} [level of the log] [which thread is being executed since we are in multi
-                            threading environment] [logger that is logging this, hence getting the classname and also
-                            for which line the log message was there] message and end with a new line
-            -->
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%thread] [%logger:%line] %msg%n</pattern>
-        </encoder>
+    <property name="LOGS" value="./logs" />
+    <appender name="Console"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%thread] [%logger:%line] %msg%n
+            </Pattern>
+        </layout>
     </appender>
-    <!-- Define a logger -->
-    <!-- 5 log levels - TRACE, DEBUG, INFO, WARN, ERROR -->
-    <!-- If the level is at the framework level, then any INFO level log would be checked -->
-    <logger name="org.springframework" level="INFO" />
-    <!-- TRACE being the lowest level; any logging at the level of TRACE, it will print it in the console -->
-    <logger name="com.bridgelabz" level="TRACE" />
-    <root>
-        <appender-ref ref="STDOUT" />
+
+    <appender name="RollingFile"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS}/spring-boot-logger.log</file>
+        <encoder
+                class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
+        </encoder>
+
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily and when the file reaches 10 MegaBytes -->
+            <fileNamePattern>${LOGS}/archived/spring-boot-logger-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <!-- LOG everything at INFO level -->
+    <root level="info">
+        <appender-ref ref="RollingFile" />
+        <appender-ref ref="Console" />
     </root>
+
+    <!-- LOG "com.baeldung*" at TRACE level -->
+    <logger name="com.bridgelabz.addressbook" level="trace" additivity="false">
+        <appender-ref ref="RollingFile" />
+        <appender-ref ref="Console" />
+    </logger>
+
 </configuration>
+
+
+
+
+
+
+
+
+

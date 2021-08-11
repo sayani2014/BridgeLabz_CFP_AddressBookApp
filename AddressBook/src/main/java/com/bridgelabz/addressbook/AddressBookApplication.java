@@ -1,37 +1,37 @@
 /**
- * Create an Address Book Spring Project to cater to REST Request.
- * Create a Rest Controller to demonstrate the various HTTP Methods.
- * Introducing DTO and Model to AddressBook App.
- * Introducing Services Layer in AddressBook App.
- * Ability for the Services Layer to store the AddressBook Data.
- * Ability to log messages.
+ * Use Lombok Library to auto generate getters and setters for the DTO.
+ * Use Lombok Library for Logging.
+ * Determine the Logging Levels, Logging to Console or File, Logging Patterns, etc based on this application running in
+   Dev, Staging or Production.
+ * Add Validation to Fields so the REST call can be validated.
+ * Provide User Friendly Error Response in case validation fails.
+ * Ability to throw User Friendly Errors in case Address Book Id is not found in Address Book App.
  *
  * @author : SAYANI KOLEY
- * @since : 10.08.2021
+ * @since : 11.08.2021
  */
 
 package com.bridgelabz.addressbook;
 
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@Slf4j
 public class AddressBookApplication {
-    public static final Logger logger = LoggerFactory.getLogger(AddressBookApplication.class);
-
     @Bean
     public ModelMapper modelMapper() {
         return new ModelMapper();
     }
 
     public static void main(String[] args) {
-        logger.debug("Welcome to Address Book Application.");
-        logger.debug("Inside Main Method.");
-        SpringApplication.run(AddressBookApplication.class, args);
+        ApplicationContext context = SpringApplication.run(AddressBookApplication.class, args);
+        log.info("Address Book Application Started in {} Environment",
+                                    context.getEnvironment().getProperty("environment"));
+        log.info("Inside Main Method.");
     }
-
 }
