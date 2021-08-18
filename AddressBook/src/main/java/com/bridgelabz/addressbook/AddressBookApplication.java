@@ -19,9 +19,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @Slf4j
+@EnableSwagger2
 public class AddressBookApplication {
     @Bean
     public ModelMapper modelMapper() {
@@ -29,9 +31,7 @@ public class AddressBookApplication {
     }
 
     public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(AddressBookApplication.class, args);
-        log.info("Address Book Application Started in {} Environment",
-                                    context.getEnvironment().getProperty("environment"));
+        SpringApplication.run(AddressBookApplication.class, args);
         log.info("Inside Main Method.");
     }
 }

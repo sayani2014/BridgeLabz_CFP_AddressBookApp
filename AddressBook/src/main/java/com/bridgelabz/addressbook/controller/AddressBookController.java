@@ -14,9 +14,8 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "/addressbook")
+@RequestMapping
 public class AddressBookController {
-//    public static final Logger logger = LoggerFactory.getLogger(AddressBookController.class);
 
     @Autowired
     private AddressBookService addressBookService;
@@ -32,7 +31,7 @@ public class AddressBookController {
         log.info("Inside addAddressDetails()");
         AddressBookDTO addData = addressBookService.addAddressDetails(addressBookDTO);
         ResponseDTO responseDTO = new ResponseDTO("Added Address Book Details", addData);
-        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+        return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);
     }
 
     /**

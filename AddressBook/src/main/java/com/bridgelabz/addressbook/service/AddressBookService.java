@@ -1,7 +1,8 @@
 package com.bridgelabz.addressbook.service;
 
+import com.bridgelabz.addressbook.builder.AddressBookBuilder;
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
-import com.bridgelabz.addressbook.entity.AddressBook;
+import com.bridgelabz.addressbook.entity.AddressBookInfo;
 import com.bridgelabz.addressbook.exception.AddressBookException;
 import com.bridgelabz.addressbook.repository.AddressBookRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -16,13 +17,15 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 public class AddressBookService {
-//    public static final Logger logger = LoggerFactory.getLogger(AddressBookService.class);
 
     @Autowired
     private AddressBookRepository addressBookRepository;
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Autowired
+    private AddressBookBuilder addressBuilder;
 
     /**
      * Purpose : Ability to add person details in Address Book
@@ -32,8 +35,9 @@ public class AddressBookService {
 
     public AddressBookDTO addAddressDetails(AddressBookDTO addressBookDTO) {
         log.info("Inside addAddressDetails()");
-        AddressBook addressBookRequest = modelMapper.map(addressBookDTO, AddressBook.class);
-        addressBookRepository.save(addressBookRequest);
+        AddressBookInfo addressBookDO = addressBuilder.buildDO(addressBookDTO);
+        addressBookDO = addressBookRepository.save(addressBookDO);
+        addressBookDTO.setId(addressBookDO.getId());
         return addressBookDTO;
     }
 
@@ -58,7 +62,7 @@ public class AddressBookService {
 
     public AddressBookDTO getAddressDetailsByID(int id) {
         log.info("Inside getAddressDetailsByID()");
-        AddressBook addressBook = findAddressBookById(id);
+        AddressBookInfo addressBook = findAddressBookById(id);
         AddressBookDTO addressBookResponse = modelMapper.map(addressBook, AddressBookDTO.class);
         return addressBookResponse;
     }
@@ -69,7 +73,7 @@ public class AddressBookService {
      * @return
      */
 
-    private AddressBook findAddressBookById(int id) {
+    private AddressBookInfo findAddressBookById(int id) {
         log.info("Inside findAddressBookById()");
         return addressBookRepository.findById(id)
                 .orElseThrow(() -> new AddressBookException("Unable to find any address book detail!"));
@@ -84,15 +88,12 @@ public class AddressBookService {
 
     public AddressBookDTO updateAddressDetails(int id, AddressBookDTO addressBookDTO) {
         log.info("Inside updateAddressDetails()");
-        AddressBookDTO addressBookResponse = null;
-        if (id > 0) {
-            AddressBook addressBookDetails = findAddressBookById(id);
-            String[] ignoreFields = {"id", "name"};
-            BeanUtils.copyProperties(addressBookDTO, addressBookDetails, ignoreFields);
-            addressBookRepository.save(addressBookDetails);
-            addressBookResponse = modelMapper.map(addressBookDetails, AddressBookDTO.class);
-        }
-        return addressBookResponse;
+        AddressBookInfo addressBookDetails = findAddressBookById(id);
+        String[] ignoreFields = {"id", "name"};
+        BeanUtils.copyProperties(addressBookDTO, addressBookDetails, ignoreFields);
+        addressBookRepository.save(addressBookDetails);
+
+        return addressBookDTO;
     }
 
     /**
@@ -103,12 +104,9 @@ public class AddressBookService {
 
     public AddressBookDTO deleteAddressDetails(int id) {
         log.info("Inside deleteAddressDetails()");
-        AddressBookDTO addressBookResponse = null;
-        if (id > 0) {
-            AddressBook addressBook = findAddressBookById(id);
-            addressBookRepository.delete(addressBook);
-            addressBookResponse = modelMapper.map(addressBook, AddressBookDTO.class);
-        }
-        return addressBookResponse;
+        AddressBookInfo addressBook = findAddressBookById(id);
+        addressBookRepository.delete(addressBook);
+
+        return null;
     }
 }

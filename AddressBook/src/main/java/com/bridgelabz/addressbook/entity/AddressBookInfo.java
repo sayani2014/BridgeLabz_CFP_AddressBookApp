@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class AddressBook {
+public class AddressBookInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

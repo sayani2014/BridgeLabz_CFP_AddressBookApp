@@ -1,392 +1,152 @@
-2021-08-11 12:01:01,819 DEBUG com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 12:01:01,834 DEBUG com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 12:01:03,772 DEBUG com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 12:01:03,772 DEBUG com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 12:01:10,693 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2021-08-11 12:01:10,818 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 4728 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 12:01:10,818 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 12:01:10,818 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2021-08-11 12:01:12,927 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-11 12:01:12,927 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-11 12:01:21,763 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-11 12:01:22,372 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 525 ms. Found 1 JPA repository interfaces.
-2021-08-11 12:01:27,490 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2021-08-11 12:01:27,787 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2021-08-11 12:01:27,787 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2021-08-11 12:01:27,787 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-08-11 12:01:28,756 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2021-08-11 12:01:28,772 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 15845 ms
-2021-08-11 12:01:29,959 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-11 12:01:31,115 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-08-11 12:01:33,271 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-11 12:01:34,427 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2021-08-11 12:01:37,115 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2021-08-11 12:01:37,505 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-11 12:01:55,280 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-11 12:01:55,311 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-11 12:01:56,530 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 12:01:57,577 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2021-08-11 12:01:57,624 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2021-08-11 12:01:57,764 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-11 12:01:57,811 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 54.007 seconds (JVM running for 77.532)
-2021-08-11 12:19:52,320 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-08-11 12:19:52,429 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2021-08-11 12:19:52,507 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2021-08-11 12:20:30,493 DEBUG com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 12:20:30,493 DEBUG com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 12:20:30,915 DEBUG com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 12:20:30,915 DEBUG com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 12:20:31,790 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 7412 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 12:20:31,790 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 12:20:31,790 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2021-08-11 12:20:31,790 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2021-08-11 12:20:31,899 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-11 12:20:31,899 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-11 12:20:34,664 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-11 12:20:34,836 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 154 ms. Found 1 JPA repository interfaces.
-2021-08-11 12:20:37,164 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2021-08-11 12:20:37,211 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2021-08-11 12:20:37,211 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2021-08-11 12:20:37,211 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-08-11 12:20:37,508 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2021-08-11 12:20:37,508 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 5609 ms
-2021-08-11 12:20:38,024 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-11 12:20:38,617 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-08-11 12:20:39,430 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-11 12:20:39,883 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2021-08-11 12:20:40,570 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2021-08-11 12:20:40,673 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-11 12:20:43,641 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-11 12:20:43,657 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-11 12:20:44,141 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 12:20:44,579 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2021-08-11 12:20:44,610 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2021-08-11 12:20:44,641 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-11 12:20:44,673 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 13.743 seconds (JVM running for 17.887)
-2021-08-11 12:22:48,831 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-11 12:22:48,831 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2021-08-11 12:22:48,831 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 0 ms
-2021-08-11 12:22:48,975 DEBUG com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-2] Inside getAddressDetails()
-2021-08-11 12:22:48,975 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-2] Inside getAddressDetails()
-2021-08-11 12:40:39,119 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-08-11 12:40:39,166 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2021-08-11 12:40:39,244 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2021-08-11 12:40:56,917 DEBUG com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 12:40:56,932 DEBUG com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 12:40:57,620 DEBUG com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 12:40:57,620 DEBUG com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 12:40:59,073 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 5824 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 12:40:59,073 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 12:40:59,073 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2021-08-11 12:40:59,073 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2021-08-11 12:40:59,135 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-11 12:40:59,135 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-11 12:41:00,885 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-11 12:41:01,370 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 463 ms. Found 1 JPA repository interfaces.
-2021-08-11 12:41:03,948 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2021-08-11 12:41:03,979 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2021-08-11 12:41:03,979 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2021-08-11 12:41:03,979 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-08-11 12:41:04,260 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2021-08-11 12:41:04,260 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 5125 ms
-2021-08-11 12:41:04,691 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-11 12:41:05,144 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-08-11 12:41:06,129 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-11 12:41:06,394 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2021-08-11 12:41:06,879 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2021-08-11 12:41:07,004 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-11 12:41:08,988 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-11 12:41:09,019 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-11 12:41:09,613 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 12:41:09,988 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2021-08-11 12:41:10,003 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2021-08-11 12:41:10,050 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-11 12:41:10,066 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 12.43 seconds (JVM running for 16.223)
-2021-08-11 12:41:17,418 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-11 12:41:17,418 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2021-08-11 12:41:17,426 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 8 ms
-2021-08-11 12:41:17,458 DEBUG com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-2] Inside getAddressDetails()
-2021-08-11 12:41:17,458 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-2] Inside getAddressDetails()
-2021-08-11 12:41:53,353 DEBUG com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-3] Inside addAddressDetails()
-2021-08-11 12:41:53,353 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-3] Inside addAddressDetails()
-2021-08-11 12:42:04,079 DEBUG com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-4] Inside getAddressDetails()
-2021-08-11 12:42:04,079 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-4] Inside getAddressDetails()
-2021-08-11 12:42:15,180 DEBUG com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-5] Inside getAddressDetailsByID()
-2021-08-11 12:42:15,180 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-5] Inside getAddressDetailsByID()
-2021-08-11 12:42:15,180 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-5] Inside findAddressBookById()
-2021-08-11 12:42:41,002 DEBUG com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-6] Inside updateAddressDetails()
-2021-08-11 12:42:41,002 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-6] Inside updateAddressDetails()
-2021-08-11 12:42:41,002 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-6] Inside findAddressBookById()
-2021-08-11 12:42:54,549 DEBUG com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-7] Inside deleteAddressDetails()
-2021-08-11 12:42:54,549 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-7] Inside deleteAddressDetails()
-2021-08-11 12:42:54,549 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-7] Inside findAddressBookById()
-2021-08-11 12:43:08,795 DEBUG com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-8] Inside getAddressDetails()
-2021-08-11 12:43:08,795 DEBUG com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-8] Inside getAddressDetails()
-2021-08-11 12:46:48,700 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-08-11 12:46:48,733 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2021-08-11 12:46:48,802 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2021-08-11 12:47:12,136 DEBUG com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 12:47:12,152 DEBUG com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 12:47:12,714 DEBUG com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 12:47:12,714 DEBUG com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 12:47:13,371 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2021-08-11 12:47:13,371 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 1988 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 12:47:13,371 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 12:47:13,386 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2021-08-11 12:47:13,449 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-11 12:47:13,449 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-11 12:47:14,355 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-11 12:47:14,417 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
-2021-08-11 12:47:15,058 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2021-08-11 12:47:15,058 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2021-08-11 12:47:15,058 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2021-08-11 12:47:15,058 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.50]
-2021-08-11 12:47:15,199 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2021-08-11 12:47:15,199 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1735 ms
-2021-08-11 12:47:15,355 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-11 12:47:15,402 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-08-11 12:47:15,558 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-11 12:47:15,714 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2021-08-11 12:47:15,886 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2021-08-11 12:47:15,917 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-11 12:47:16,683 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-11 12:47:16,698 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-11 12:47:17,152 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 12:47:17,495 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2021-08-11 12:47:17,526 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2021-08-11 12:47:17,558 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-11 12:47:17,589 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 4.852 seconds (JVM running for 8.161)
-2021-08-11 13:08:11,197 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-08-11 13:08:11,244 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2021-08-11 13:08:11,322 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2021-08-11 13:17:03,271 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 13:17:03,286 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 13:17:03,692 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 13:17:03,692 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 13:17:04,349 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 9596 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 13:17:04,349 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 13:17:04,349 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 13:17:14,714 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 13:17:15,778 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 12.077 seconds (JVM running for 16.05)
-2021-08-11 13:20:05,664 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 13:20:05,680 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 13:20:06,039 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 13:20:06,039 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 13:20:06,742 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 4480 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 13:20:06,742 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 13:20:06,742 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 13:20:10,648 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 13:20:11,289 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 5.233 seconds (JVM running for 7.506)
-2021-08-11 13:24:43,797 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 13:24:43,797 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 13:24:44,187 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 13:24:44,187 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 13:24:44,906 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 9168 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 13:24:44,906 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 13:24:44,906 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 13:24:48,875 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 13:24:49,312 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 5.117 seconds (JVM running for 7.208)
-2021-08-11 13:24:49,312 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 13:26:03,060 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 13:26:03,076 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 13:26:03,592 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 13:26:03,592 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 13:26:04,388 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 6252 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 13:26:04,388 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 13:26:04,388 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: prod
-2021-08-11 13:26:08,742 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 13:26:09,445 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 5.835 seconds (JVM running for 8.094)
-2021-08-11 13:26:09,445 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in PROD Environment
-2021-08-11 13:28:25,217 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 13:28:25,217 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 13:28:25,702 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 13:28:25,702 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 13:28:26,733 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 6976 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 13:28:26,733 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 13:28:26,733 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: prod
-2021-08-11 13:28:32,483 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 13:28:32,960 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 7.241 seconds (JVM running for 9.818)
-2021-08-11 13:28:32,960 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in PROD Environment
-2021-08-11 13:29:40,583 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Welcome to Address Book Application.
-2021-08-11 13:29:40,583 INFO com.bridgelabz.addressbook.AddressBookApplication [main] Inside Main Method.
-2021-08-11 13:29:41,021 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Welcome to Address Book Application.
-2021-08-11 13:29:41,021 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 13:29:41,802 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 5368 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 13:29:41,817 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 13:29:41,817 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 13:29:46,514 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 13:29:46,936 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 5.899 seconds (JVM running for 8.763)
-2021-08-11 13:29:46,936 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 14:43:12,064 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m56s558ms162µs200ns).
-2021-08-11 15:13:24,993 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 4524 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 15:13:25,024 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 15:13:25,024 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 15:13:40,341 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 15:13:41,450 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 18.126 seconds (JVM running for 24.395)
-2021-08-11 15:13:41,466 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 15:13:41,481 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 15:19:08,092 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 1752 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 15:19:08,092 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 15:19:08,092 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: prod
-2021-08-11 15:19:11,733 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 15:19:12,170 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 4.979 seconds (JVM running for 7.084)
-2021-08-11 15:19:12,170 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in PROD Environment
-2021-08-11 15:19:12,170 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 15:44:02,698 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 4892 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 15:44:02,730 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 15:44:02,730 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 15:44:55,806 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 15:44:59,736 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 64.473 seconds (JVM running for 99.311)
-2021-08-11 15:44:59,736 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 15:44:59,736 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 17:28:35,106 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 7884 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 17:28:35,168 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 17:28:35,168 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 17:29:25,985 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 17:29:30,600 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 59.526 seconds (JVM running for 69.65)
-2021-08-11 17:29:30,600 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 17:29:30,678 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 17:29:42,000 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-1] Inside getAddressDetails()
-2021-08-11 17:29:42,001 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-1] Inside getAddressDetails()
-2021-08-11 17:30:36,066 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-3] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.addAddressDetails(com.bridgelabz.addressbook.dto.AddressBookDTO) with 2 errors: [Field error in object 'addressBookDTO' on field 'name': rejected value []; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] [Field error in object 'addressBookDTO' on field 'name': rejected value []; codes [Pattern.addressBookDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@74637f97,^[A-Z][a-zA-z\s]{2,}$]; default message [Person Name Invalid]] ]
-2021-08-11 17:43:04,437 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-5] Inside addAddressDetails()
-2021-08-11 17:43:04,437 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-5] Inside addAddressDetails()
-2021-08-11 17:43:17,126 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-6] Inside getAddressDetails()
-2021-08-11 17:43:17,127 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-6] Inside getAddressDetails()
-2021-08-11 17:53:53,324 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 8420 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 17:53:53,324 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 17:53:53,324 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 17:54:10,193 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 17:54:11,090 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 19.501 seconds (JVM running for 27.29)
-2021-08-11 17:54:11,121 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 17:54:11,152 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 17:56:58,315 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO): [Field error in object 'addressBookDTO' on field 'name': rejected value [null]; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 17:57:19,162 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO) with 2 errors: [Field error in object 'addressBookDTO' on field 'name': rejected value [null]; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] [Field error in object 'addressBookDTO' on field 'phoneNo': rejected value [07895641230]; codes [Pattern.addressBookDTO.phoneNo,Pattern.phoneNo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.phoneNo,phoneNo]; arguments []; default message [phoneNo],[Ljavax.validation.constraints.Pattern$Flag;@674f263f,^(0|91)?[\s][0-9]{10}$]; default message [Person Phone Number Invalid]] ]
-2021-08-11 17:57:25,743 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO) with 2 errors: [Field error in object 'addressBookDTO' on field 'phoneNo': rejected value [7895641230]; codes [Pattern.addressBookDTO.phoneNo,Pattern.phoneNo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.phoneNo,phoneNo]; arguments []; default message [phoneNo],[Ljavax.validation.constraints.Pattern$Flag;@674f263f,^(0|91)?[\s][0-9]{10}$]; default message [Person Phone Number Invalid]] [Field error in object 'addressBookDTO' on field 'name': rejected value [null]; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 17:58:05,115 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-8] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO): [Field error in object 'addressBookDTO' on field 'name': rejected value [null]; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 17:59:18,913 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 5524 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 17:59:18,929 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 17:59:18,929 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 17:59:26,612 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 17:59:27,065 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 8.776 seconds (JVM running for 13.819)
-2021-08-11 17:59:27,080 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 17:59:27,080 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 17:59:37,212 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO): [Field error in object 'addressBookDTO' on field 'name': rejected value [null]; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 18:00:24,328 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 3272 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 18:00:24,328 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 18:00:24,343 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 18:00:28,957 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 18:00:29,472 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 5.844 seconds (JVM running for 8.669)
-2021-08-11 18:00:29,472 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 18:00:29,472 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 18:00:43,737 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO) with 2 errors: [Field error in object 'addressBookDTO' on field 'phoneNo': rejected value [91 7895641230]; codes [Pattern.addressBookDTO.phoneNo,Pattern.phoneNo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.phoneNo,phoneNo]; arguments []; default message [phoneNo],[Ljavax.validation.constraints.Pattern$Flag;@4d14a22a,^(0|91)\s[0-9]{11,12}$]; default message [Person Phone Number Invalid]] [Field error in object 'addressBookDTO' on field 'name': rejected value [null]; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 18:01:33,909 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 11108 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 18:01:33,925 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 18:01:33,925 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 18:01:39,544 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 18:01:39,949 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 6.805 seconds (JVM running for 9.265)
-2021-08-11 18:01:39,949 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 18:01:39,949 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 18:01:48,371 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO) with 2 errors: [Field error in object 'addressBookDTO' on field 'phoneNo': rejected value [91 7895641230]; codes [Pattern.addressBookDTO.phoneNo,Pattern.phoneNo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.phoneNo,phoneNo]; arguments []; default message [phoneNo],[Ljavax.validation.constraints.Pattern$Flag;@1b92c3c1,^[0-9]{10}$]; default message [Person Phone Number Invalid]] [Field error in object 'addressBookDTO' on field 'name': rejected value [null]; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 18:01:58,133 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO): [Field error in object 'addressBookDTO' on field 'name': rejected value [null]; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 18:04:45,472 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-6] Inside updateAddressDetails()
-2021-08-11 18:04:45,474 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-6] Inside updateAddressDetails()
-2021-08-11 18:04:45,478 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-6] Inside findAddressBookById()
-2021-08-11 18:04:54,834 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-7] Inside updateAddressDetails()
-2021-08-11 18:04:54,835 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-7] Inside updateAddressDetails()
-2021-08-11 18:04:54,835 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-7] Inside findAddressBookById()
-2021-08-11 18:05:02,835 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-8] Inside getAddressDetails()
-2021-08-11 18:05:02,837 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-8] Inside getAddressDetails()
-2021-08-11 18:06:58,906 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 2492 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 18:06:58,922 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 18:06:58,922 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 18:07:54,340 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 18:08:00,739 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 65.46 seconds (JVM running for 82.903)
-2021-08-11 18:08:00,755 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 18:08:00,859 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 18:08:16,030 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.updateAddressDetails(int,com.bridgelabz.addressbook.dto.AddressBookDTO): [Field error in object 'addressBookDTO' on field 'phoneNo': rejected value [0 7895641230]; codes [Pattern.addressBookDTO.phoneNo,Pattern.phoneNo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.phoneNo,phoneNo]; arguments []; default message [phoneNo],[Ljavax.validation.constraints.Pattern$Flag;@59bc5a5f,^[0|91\s][0-9]{10}$]; default message [Person Phone Number Invalid]] ]
-2021-08-11 19:09:10,472 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 7644 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 19:09:10,503 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 19:09:10,503 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 19:09:34,732 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 19:09:36,191 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 27.824 seconds (JVM running for 34.548)
-2021-08-11 19:09:36,191 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 19:09:36,207 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 19:13:15,666 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.addAddressDetails(com.bridgelabz.addressbook.dto.AddressBookDTO) with 2 errors: [Field error in object 'addressBookDTO' on field 'name': rejected value []; codes [Pattern.addressBookDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@220d2308,^[A-Z][a-zA-z\s]{2,}$]; default message [Person Name Invalid]] [Field error in object 'addressBookDTO' on field 'name': rejected value []; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 19:14:32,997 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bridgelabz.addressbook.dto.ResponseDTO> com.bridgelabz.addressbook.controller.AddressBookController.addAddressDetails(com.bridgelabz.addressbook.dto.AddressBookDTO) with 3 errors: [Field error in object 'addressBookDTO' on field 'phoneNo': rejected value [125]; codes [Pattern.addressBookDTO.phoneNo,Pattern.phoneNo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.phoneNo,phoneNo]; arguments []; default message [phoneNo],[Ljavax.validation.constraints.Pattern$Flag;@220d2308,^[0-9]{10}$]; default message [Person Phone Number Invalid]] [Field error in object 'addressBookDTO' on field 'name': rejected value []; codes [Pattern.addressBookDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@220d2308,^[A-Z][a-zA-z\s]{2,}$]; default message [Person Name Invalid]] [Field error in object 'addressBookDTO' on field 'name': rejected value []; codes [NotEmpty.addressBookDTO.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addressBookDTO.name,name]; arguments []; default message [name]]; default message [Person Name cannot be null]] ]
-2021-08-11 19:19:38,176 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-6] Inside getAddressDetailsByID()
-2021-08-11 19:19:38,194 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-6] Inside getAddressDetailsByID()
-2021-08-11 19:19:38,195 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-6] Inside findAddressBookById()
-2021-08-11 19:19:42,837 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Unable to find any address book detail!] with root cause
-java.lang.RuntimeException: Unable to find any address book detail!
-	at com.bridgelabz.addressbook.service.AddressBookService.lambda$findAddressBookById$1(AddressBookService.java:51)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at com.bridgelabz.addressbook.service.AddressBookService.findAddressBookById(AddressBookService.java:51)
-	at com.bridgelabz.addressbook.service.AddressBookService.getAddressDetailsByID(AddressBookService.java:43)
-	at com.bridgelabz.addressbook.controller.AddressBookController.getAddressDetailsByID(AddressBookController.java:43)
+2021-08-17 11:35:49,845 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-CGMK20A with PID 8744 (C:\Users\Sayani Koley\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by Sayani Koley in C:\Users\Sayani Koley\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
+2021-08-17 11:35:49,860 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 11:35:49,860 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-08-17 11:35:54,751 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-17 11:35:55,282 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 6.629 seconds (JVM running for 9.826)
+2021-08-17 11:35:55,298 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
+2021-08-17 11:35:55,298 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
+2021-08-17 11:39:39,239 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-CGMK20A with PID 7896 (C:\Users\Sayani Koley\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by Sayani Koley in C:\Users\Sayani Koley\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
+2021-08-17 11:39:39,239 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 11:39:39,239 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-08-17 11:39:44,963 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-17 11:39:46,010 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 7.807 seconds (JVM running for 10.233)
+2021-08-17 11:39:46,026 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
+2021-08-17 11:39:46,026 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
+2021-08-17 11:40:14,646 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-3] Inside getAddressDetails()
+2021-08-17 11:40:14,648 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-3] Inside getAddressDetails()
+2021-08-17 11:40:48,418 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-9] Inside addAddressDetails()
+2021-08-17 11:40:48,419 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-9] Inside addAddressDetails()
+2021-08-17 11:40:57,912 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-1] Inside getAddressDetails()
+2021-08-17 11:40:57,913 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-1] Inside getAddressDetails()
+2021-08-17 11:58:14,547 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-CGMK20A with PID 6600 (C:\Users\Sayani Koley\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by Sayani Koley in C:\Users\Sayani Koley\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
+2021-08-17 11:58:14,547 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-17 11:58:14,547 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-08-17 11:58:18,578 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.bridgelabz.addressbook.AddressBookApplication.main(AddressBookApplication.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-2021-08-11 19:28:58,488 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting AddressBookApplication using Java 11.0.11 on DESKTOP-N66BMGP with PID 9596 (C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook\target\classes started by User in C:\Users\User\Desktop\BridgeLabz\CFP\BridgeLabz_CFP_AddressBookApp\AddressBook)
-2021-08-11 19:28:58,488 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-11 19:28:58,488 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
-2021-08-11 19:29:15,503 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-11 19:29:16,206 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started AddressBookApplication in 18.957 seconds (JVM running for 26.729)
-2021-08-11 19:29:16,206 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Address Book Application Started in DEV Environment
-2021-08-11 19:29:16,206 INFO com.bridgelabz.addressbook.AddressBookApplication [restartedMain] Inside Main Method.
-2021-08-11 19:29:59,374 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-1] Inside getAddressDetailsByID()
-2021-08-11 19:29:59,376 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-1] Inside getAddressDetailsByID()
-2021-08-11 19:29:59,376 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-1] Inside findAddressBookById()
-2021-08-11 19:29:59,891 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [com.bridgelabz.addressbook.exception.AddressBookException: Unable to find any address book detail!]
-2021-08-11 19:30:17,768 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-4] Inside getAddressDetailsByID()
-2021-08-11 19:30:17,768 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-4] Inside getAddressDetailsByID()
-2021-08-11 19:30:17,768 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-4] Inside findAddressBookById()
-2021-08-11 19:30:32,180 INFO com.bridgelabz.addressbook.controller.AddressBookController [http-nio-8080-exec-5] Inside getAddressDetails()
-2021-08-11 19:30:32,181 INFO com.bridgelabz.addressbook.service.AddressBookService [http-nio-8080-exec-5] Inside getAddressDetails()
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:434)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:209)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1352)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:132)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 54 common frames omitted
+2021-08-17 11:58:18,578 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-08-17 11:58:18,578 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-08-17 11:58:18,640 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.bridgelabz.addressbook.AddressBookApplication.main(AddressBookApplication.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 21 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 38 common frames omitted
