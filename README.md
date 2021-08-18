@@ -14,3 +14,8 @@
    Add Validation to Fields so the REST call can be validated.
    Provide User Friendly Error Response in case validation fails.
    Ability to throw User Friendly Errors in case Address Book Id is not found in Address Book App.
+   
+3. Ability to add .yml files in the resources folder.
+   Ability to configure profiles.
+   Ability to create a builder class for adding address details in the database.
+   Ability to create test class and methods for the controller, builder and service.
