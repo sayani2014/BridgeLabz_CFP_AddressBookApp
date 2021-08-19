@@ -30,15 +30,21 @@ public class AddressBookBuilderTest {
     public void buildDOTest() {
         AddressBookDTO addressBookDTO = new AddressBookDTO();
         addressBookDTO.setName("Test");
-        addressBookDTO.setAddress("WB");
-        addressBookDTO.setPhoneNo("456789");
-        addressBookDTO.setEmail("abc@abc.com");
+        addressBookDTO.setAddress("12/1 abc");
+        addressBookDTO.setCity("Test");
+        addressBookDTO.setState("Test");
+        addressBookDTO.setZip("789456");
+        addressBookDTO.setPhoneNo("7894561230");
+        addressBookDTO.setEmail("test@abc.com");
 
         AddressBookInfo addressBookInfo = addressBookBuilder.buildDO(addressBookDTO);
 
         Assert.assertEquals("Test", addressBookInfo.getName());
-        Assert.assertEquals("WB", addressBookInfo.getAddress());
-        Assert.assertEquals("456789", addressBookInfo.getPhoneNo());
-        Assert.assertEquals("abc@abc.com", addressBookInfo.getEmail());
+        Assert.assertEquals("12/1 abc", addressBookInfo.getAddress());
+        Assert.assertEquals("Test", addressBookInfo.getCity());
+        Assert.assertEquals("Test", addressBookInfo.getState());
+        Assert.assertEquals("789456", addressBookInfo.getZip());
+        Assert.assertEquals("7894561230", addressBookInfo.getPhoneNo());
+        Assert.assertEquals("test@abc.com", addressBookInfo.getEmail());
     }
 }
