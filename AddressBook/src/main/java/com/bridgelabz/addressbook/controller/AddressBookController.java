@@ -2,7 +2,7 @@ package com.bridgelabz.addressbook.controller;
 
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import com.bridgelabz.addressbook.dto.ResponseDTO;
-import com.bridgelabz.addressbook.service.AddressBookService;
+import com.bridgelabz.addressbook.service.IAddressBookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,12 +18,16 @@ import java.util.List;
 public class AddressBookController {
 
     @Autowired
-    private AddressBookService addressBookService;
+    private IAddressBookService addressBookService;
 
     /**
-     * Purpose : Ability to add person details in Address Book
-     * @param addressBookDTO
-     * @return
+     * Purpose : Ability to insert person details in Address Book.
+     *
+     * @param addressBookDTO Object of AddressBookDTO which will validate user-input
+     *                       and once valid, will pass it to the AddressBook entity.
+     *                       Finally, the user-input details gets stored in the Database.
+     *
+     * @return responseDTO Object of ResponseDTO which returns the status of the POST Method.
      */
 
     @PostMapping(value = "/addAddressDetails")
@@ -35,8 +39,9 @@ public class AddressBookController {
     }
 
     /**
-     * Purpose : Ability to fetch all person details from Address Book
-     * @return
+     * Purpose : Ability to fetch all person details from Address Book.
+     *
+     * @return responseDTO Object of ResponseDTO which returns the status of the GET Method.
      */
 
     @GetMapping(value = "/getAddressDetails")
@@ -48,9 +53,12 @@ public class AddressBookController {
     }
 
     /**
-     * Purpose : Ability to fetch person details from Address Book using ID
-     * @param id
-     * @return
+     * Purpose : Ability to fetch person details from Address Book based on a particular ID.
+     *
+     * @param id On providing ID, the user-input is matched with the id value of the database.
+     *           If found, it returns the person details from Address Book, else returns error message.
+     *
+     * @return responseDTO Object of ResponseDTO which returns the status of the GET Method.
      */
 
     @GetMapping(value = "/getAddressDetailsByID")
@@ -62,10 +70,16 @@ public class AddressBookController {
     }
 
     /**
-     * Purpose : Ability to update person details in Address Book using ID
-     * @param id
-     * @param addressBookDTO
-     * @return
+     * Purpose : Ability to update person details in Address Book based on a particular ID.
+     *
+     * @param id On providing ID, the user-input is matched with the id value of the database.
+     *           If ID is not found, then an error message is returned.
+     *
+     * @param addressBookDTO If ID is found, Object of AddressBookDTO which will validate user-input
+     *                       and once valid, will pass it to the AddressBook entity.
+     *                       Finally, the user-input details gets stored in the Database.
+     *
+     * @return responseDTO Object of ResponseDTO which returns the status of the PUT Method.
      */
 
     @PutMapping(value = "/updateAddressDetails")
@@ -78,9 +92,12 @@ public class AddressBookController {
     }
 
     /**
-     * Purpose : Ability to delete person details from Address Book using ID
-     * @param id
-     * @return
+     * Purpose : Ability to delete person details from Address Book based on a particular ID.
+     *
+     * @param id On providing ID, the user-input is matched with the id value of the database.
+     *           If found, it deletes the person details from Address Book, else returns error message.
+     *
+     * @return responseDTO Object of ResponseDTO which returns the status of the DELETE Method.
      */
 
     @DeleteMapping(value = "/deleteAddressDetails")

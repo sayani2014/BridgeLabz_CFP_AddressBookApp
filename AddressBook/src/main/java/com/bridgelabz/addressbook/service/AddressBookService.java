@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Service
-public class AddressBookService {
+public class AddressBookService implements IAddressBookService{
 
     @Autowired
     private AddressBookRepository addressBookRepository;
@@ -28,11 +28,17 @@ public class AddressBookService {
     private AddressBookBuilder addressBuilder;
 
     /**
-     * Purpose : Ability to add person details in Address Book
-     * @param addressBookDTO
-     * @return
+     * Purpose : Ability to insert person details in Address Book.
+     *
+     * @param addressBookDTO Object of AddressBookDTO which will validate user-input
+     *                       and once valid, will pass it to the AddressBook entity.
+     *                       This operation takes place in the AddressBookBuilder.class which returns the object of
+     *                       AddressBookInfo.class. Finally, the user-input details gets stored in the Database.
+     *
+     * @return addressBookDTO Object of AddressBookDTO.
      */
 
+    @Override
     public AddressBookDTO addAddressDetails(AddressBookDTO addressBookDTO) {
         log.info("Inside addAddressDetails()");
         AddressBookInfo addressBookDO = addressBuilder.buildDO(addressBookDTO);
@@ -42,24 +48,31 @@ public class AddressBookService {
     }
 
     /**
-     * Purpose : Ability to fetch all person details from Address Book
-     * @return
+     * Purpose : Ability to fetch all person details from Address Book.
+     *
+     * @return List<AddressBookDTO>.
      */
 
+    @Override
     public List<AddressBookDTO> getAddressDetails() {
         log.info("Inside getAddressDetails()");
         return addressBookRepository.findAll().stream().map(addressBook -> {
             return new AddressBookDTO(addressBook.getId(), addressBook.getName(), addressBook.getAddress(),
-                                                                addressBook.getPhoneNo(), addressBook.getEmail());
+                    addressBook.getCity(), addressBook.getState(), addressBook.getZip(), addressBook.getPhoneNo(),
+                    addressBook.getEmail());
             }).collect(Collectors.toList());
     }
 
     /**
-     * Purpose : Ability to fetch person details from Address Book using ID
-     * @param id
-     * @return
+     * Purpose : Ability to fetch person details from Address Book based on a particular ID.
+     *
+     * @param id On providing ID, the user-input is matched with the id value of the database.
+     *           If found, it returns the person details from Address Book, else returns error message.
+     *
+     * @return addressBookResponse Object of AddressBookDTO.
      */
 
+    @Override
     public AddressBookDTO getAddressDetailsByID(int id) {
         log.info("Inside getAddressDetailsByID()");
         AddressBookInfo addressBook = findAddressBookById(id);
@@ -68,9 +81,11 @@ public class AddressBookService {
     }
 
     /**
-     * Purpose : Ability to find person details from Address Book using ID
-     * @param id
-     * @return
+     * Purpose : Ability to find ID from Address Book database.
+     *
+     * @param id On providing ID, the user-input is matched with the id value of the database.
+     *
+     * @return If found, object of AddressBook, else return error message.
      */
 
     private AddressBookInfo findAddressBookById(int id) {
@@ -80,16 +95,26 @@ public class AddressBookService {
     }
 
     /**
-     * Purpose : Ability to update person details in Address Book using ID
-     * @param id
-     * @param addressBookDTO
-     * @return
+     * Purpose : Ability to update person details in Address Book based on a particular ID.
+     *
+     * @param id On providing ID, the user-input is matched with the id value of the database.
+     *           If ID is not found, then an error message is returned.
+     *
+     * @param addressBookDTO If ID is found, Object of AddressBookDTO which will validate user-input
+     *                       and once valid, will pass it to the AddressBook entity.
+     *                       Finally, the user-input details gets stored in the Database.
+     *                       Note : The BeanUtils.copyProperties() has the feature of excluding those attributes
+     *                              from the Bean class which we do not wish to update.
+     *
+     * @return addressBookResponse Object of AddressBookDTO.
      */
 
+
+    @Override
     public AddressBookDTO updateAddressDetails(int id, AddressBookDTO addressBookDTO) {
         log.info("Inside updateAddressDetails()");
         AddressBookInfo addressBookDetails = findAddressBookById(id);
-        String[] ignoreFields = {"id", "name"};
+        String[] ignoreFields = {"id", "name", "createdDate"};
         BeanUtils.copyProperties(addressBookDTO, addressBookDetails, ignoreFields);
         addressBookRepository.save(addressBookDetails);
 
@@ -97,11 +122,15 @@ public class AddressBookService {
     }
 
     /**
-     * Purpose : Ability to delete person details from Address Book using ID
-     * @param id
-     * @return
+     * Purpose : Ability to delete person details from Address Book based on a particular ID.
+     *
+     * @param id On providing ID, the user-input is matched with the id value of the database.
+     *           If found, it deletes the person details from Address Book, else returns error message.
+     *
+     * @return addressBookResponse Object of AddressBookDTO.
      */
 
+    @Override
     public AddressBookDTO deleteAddressDetails(int id) {
         log.info("Inside deleteAddressDetails()");
         AddressBookInfo addressBook = findAddressBookById(id);

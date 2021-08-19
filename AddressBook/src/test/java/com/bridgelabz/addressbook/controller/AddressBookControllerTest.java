@@ -6,7 +6,7 @@ package com.bridgelabz.addressbook.controller;
 
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import com.bridgelabz.addressbook.dto.ResponseDTO;
-import com.bridgelabz.addressbook.service.AddressBookService;
+import com.bridgelabz.addressbook.service.IAddressBookService;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,8 +25,9 @@ public class AddressBookControllerTest {
 
     @InjectMocks
     private AddressBookController addressBookController;
+
     @Mock
-    private AddressBookService iAddressBookService;
+    private IAddressBookService iAddressBookService;
 
     /**
      * Purpose : Ability to write Test Cases for getAddressesDetails() of AddressBookController.class
@@ -67,10 +68,13 @@ public class AddressBookControllerTest {
     @Test
     public void addAddressDetailsTest() {
         AddressBookDTO addressBookDTO = new AddressBookDTO();
-        addressBookDTO.setName("Sayani");
-        addressBookDTO.setAddress("WB");
-        addressBookDTO.setPhoneNo("123456");
-        addressBookDTO.setEmail("abc@abc.in");
+        addressBookDTO.setName("Test");
+        addressBookDTO.setAddress("12/1 abc");
+        addressBookDTO.setCity("Test");
+        addressBookDTO.setState("Test");
+        addressBookDTO.setZip("789456");
+        addressBookDTO.setPhoneNo("7894561230");
+        addressBookDTO.setEmail("test@abc.com");
 
         when(iAddressBookService.addAddressDetails(addressBookDTO)).thenReturn(new AddressBookDTO());
         ResponseEntity<ResponseDTO> responseEntity = addressBookController.addAddressDetails(addressBookDTO);
@@ -98,10 +102,13 @@ public class AddressBookControllerTest {
     public void updateAddressDetailsTest() {
         int id = 1;
         AddressBookDTO addressBookDTO = new AddressBookDTO();
-        addressBookDTO.setName("Sayani");
-        addressBookDTO.setAddress("WB");
-        addressBookDTO.setPhoneNo("123456");
-        addressBookDTO.setEmail("abc@abc.in");
+        addressBookDTO.setName("Test");
+        addressBookDTO.setAddress("12/1 abc");
+        addressBookDTO.setCity("Test");
+        addressBookDTO.setState("Test");
+        addressBookDTO.setZip("789456");
+        addressBookDTO.setPhoneNo("7894561230");
+        addressBookDTO.setEmail("test@abc.com");
 
         when(iAddressBookService.updateAddressDetails(id, addressBookDTO)).thenReturn(new AddressBookDTO());
         ResponseEntity<ResponseDTO> responseEntity = addressBookController.updateAddressDetails(id, addressBookDTO);
