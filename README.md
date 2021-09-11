@@ -19,3 +19,6 @@
    Ability to configure profiles.
    Ability to create a builder class for adding address details in the database.
    Ability to create test class and methods for the controller, builder and service.
+   
+4. Ability to add the State table in the address book problem and fetch data from it.
+   Ability to update the AddressBookInfo table according to the frontend requirement.
