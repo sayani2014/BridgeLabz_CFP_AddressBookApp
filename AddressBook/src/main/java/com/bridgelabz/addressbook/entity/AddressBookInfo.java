@@ -4,14 +4,12 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Data
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"phoneNo"})})
 public class AddressBookInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,7 +21,6 @@ public class AddressBookInfo {
     private String state;
     private String phoneNo;
     private String zip;
-    private String email;
 
     @CreationTimestamp
     private LocalDateTime createdDate;

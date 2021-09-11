@@ -35,7 +35,7 @@ public class AddressBookBuilderTest {
         addressBookDTO.setState("Test");
         addressBookDTO.setZip("789456");
         addressBookDTO.setPhoneNo("7894561230");
-        addressBookDTO.setEmail("test@abc.com");
+//        addressBookDTO.setEmail("test@abc.com");
 
         AddressBookInfo addressBookInfo = addressBookBuilder.buildDO(addressBookDTO);
 
@@ -45,6 +45,6 @@ public class AddressBookBuilderTest {
         Assert.assertEquals("Test", addressBookInfo.getState());
         Assert.assertEquals("789456", addressBookInfo.getZip());
         Assert.assertEquals("7894561230", addressBookInfo.getPhoneNo());
-        Assert.assertEquals("test@abc.com", addressBookInfo.getEmail());
+//        Assert.assertEquals("test@abc.com", addressBookInfo.getEmail());
     }
 }

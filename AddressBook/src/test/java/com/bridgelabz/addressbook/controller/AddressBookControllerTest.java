@@ -74,7 +74,7 @@ public class AddressBookControllerTest {
         addressBookDTO.setState("Test");
         addressBookDTO.setZip("789456");
         addressBookDTO.setPhoneNo("7894561230");
-        addressBookDTO.setEmail("test@abc.com");
+//        addressBookDTO.setEmail("test@abc.com");
 
         when(iAddressBookService.addAddressDetails(addressBookDTO)).thenReturn(new AddressBookDTO());
         ResponseEntity<ResponseDTO> responseEntity = addressBookController.addAddressDetails(addressBookDTO);
@@ -108,7 +108,7 @@ public class AddressBookControllerTest {
         addressBookDTO.setState("Test");
         addressBookDTO.setZip("789456");
         addressBookDTO.setPhoneNo("7894561230");
-        addressBookDTO.setEmail("test@abc.com");
+//        addressBookDTO.setEmail("test@abc.com");
 
         when(iAddressBookService.updateAddressDetails(id, addressBookDTO)).thenReturn(new AddressBookDTO());
         ResponseEntity<ResponseDTO> responseEntity = addressBookController.updateAddressDetails(id, addressBookDTO);

@@ -2,6 +2,7 @@ package com.bridgelabz.addressbook.controller;
 
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import com.bridgelabz.addressbook.dto.ResponseDTO;
+import com.bridgelabz.addressbook.dto.StateDTO;
 import com.bridgelabz.addressbook.service.IAddressBookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@CrossOrigin
 @RequestMapping
 public class AddressBookController {
 
@@ -34,7 +36,7 @@ public class AddressBookController {
     public ResponseEntity<ResponseDTO> addAddressDetails(@Valid @RequestBody AddressBookDTO addressBookDTO) {
         log.info("Inside addAddressDetails()");
         AddressBookDTO addData = addressBookService.addAddressDetails(addressBookDTO);
-        ResponseDTO responseDTO = new ResponseDTO("Added Address Book Details", addData);
+        ResponseDTO responseDTO = new ResponseDTO("Person Details added successfully in Address Book", addData);
         return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);
     }
 
@@ -105,6 +107,20 @@ public class AddressBookController {
         log.info("Inside deleteAddressDetails()");
         AddressBookDTO deletedData = addressBookService.deleteAddressDetails(id);
         ResponseDTO responseDTO = new ResponseDTO("Deleted by ID : Address Book Details", deletedData);
+        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+    }
+
+    /**
+     * Purpose : Ability to fetch all state details from State Repository.
+     *
+     * @return responseDTO Object of ResponseDTO which returns the status of the GET Method.
+     */
+
+    @GetMapping(value = "/getStateDetails")
+    public ResponseEntity<ResponseDTO> getStateDetails() {
+        log.info("Inside getStateDetails()");
+        List<StateDTO> stateList = addressBookService.getStateDetails();
+        ResponseDTO responseDTO = new ResponseDTO("Fetched all State Details", stateList);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 }

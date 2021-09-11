@@ -1,6 +1,7 @@
 package com.bridgelabz.addressbook.exception;
 
 import com.bridgelabz.addressbook.dto.ResponseDTO;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.ObjectError;
@@ -43,5 +44,11 @@ public class AddressBookExceptionHandler {
         ResponseDTO responseDTO = new ResponseDTO("Exception while processing REST Request",
                                                                                         exception.getMessage());
         return new ResponseEntity<>(responseDTO, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<ResponseDTO> handleDataIntegrityViolationException (DataIntegrityViolationException exception){
+        ResponseDTO responseDTO = new ResponseDTO("Person Details already exist", exception.getMessage());
+        return new ResponseEntity<>(responseDTO, HttpStatus.LOCKED);
     }
 }

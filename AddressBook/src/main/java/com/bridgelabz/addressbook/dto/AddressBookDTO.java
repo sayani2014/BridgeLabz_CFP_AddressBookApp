@@ -1,10 +1,8 @@
 package com.bridgelabz.addressbook.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.validation.constraints.Email;
+import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
@@ -19,7 +17,7 @@ public class AddressBookDTO {
     private String name;
 
     @NotEmpty(message = "Address cannot be null")
-    @Pattern(regexp = "^[a-zA-Z0-9\\s,./]+$", message = "Person Address Invalid")
+    @Pattern(regexp = "^[a-zA-Z0-9\\s,./()]+$", message = "Person Address Invalid")
     private String address;
 
     @NotEmpty(message = "City cannot be null")
@@ -31,14 +29,11 @@ public class AddressBookDTO {
     private String state;
 
     @NotEmpty(message = "PhoneNo cannot be null")
+    @Column(unique=true)
     @Pattern(regexp = "^[0-9]{10}$", message = "Person PhoneNo Invalid")
     private String phoneNo;
 
     @NotEmpty(message = "Zip cannot be null")
     @Pattern(regexp = "^[0-9]{6}$", message = "Person Zip Invalid")
     private String zip;
-
-    @NotEmpty(message = "Email cannot be null")
-    @Email(message = "Person Email invalid")
-    private String email;
 }

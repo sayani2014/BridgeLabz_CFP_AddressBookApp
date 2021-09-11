@@ -2,9 +2,11 @@ package com.bridgelabz.addressbook.service;
 
 import com.bridgelabz.addressbook.builder.AddressBookBuilder;
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
+import com.bridgelabz.addressbook.dto.StateDTO;
 import com.bridgelabz.addressbook.entity.AddressBookInfo;
 import com.bridgelabz.addressbook.exception.AddressBookException;
 import com.bridgelabz.addressbook.repository.AddressBookRepository;
+import com.bridgelabz.addressbook.repository.StateRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
@@ -20,6 +22,9 @@ public class AddressBookService implements IAddressBookService{
 
     @Autowired
     private AddressBookRepository addressBookRepository;
+
+    @Autowired
+    private StateRepository stateRepository;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -44,6 +49,7 @@ public class AddressBookService implements IAddressBookService{
         AddressBookInfo addressBookDO = addressBuilder.buildDO(addressBookDTO);
         addressBookDO = addressBookRepository.save(addressBookDO);
         addressBookDTO.setId(addressBookDO.getId());
+
         return addressBookDTO;
     }
 
@@ -58,8 +64,7 @@ public class AddressBookService implements IAddressBookService{
         log.info("Inside getAddressDetails()");
         return addressBookRepository.findAll().stream().map(addressBook -> {
             return new AddressBookDTO(addressBook.getId(), addressBook.getName(), addressBook.getAddress(),
-                    addressBook.getCity(), addressBook.getState(), addressBook.getZip(), addressBook.getPhoneNo(),
-                    addressBook.getEmail());
+                    addressBook.getCity(), addressBook.getState(), addressBook.getZip(), addressBook.getPhoneNo());
             }).collect(Collectors.toList());
     }
 
@@ -137,5 +142,19 @@ public class AddressBookService implements IAddressBookService{
         addressBookRepository.delete(addressBook);
 
         return null;
+    }
+
+    /**
+     * Purpose : Ability to fetch all state details from State Repository.
+     *
+     * @return List<StateDTO>
+     */
+
+    @Override
+    public List<StateDTO> getStateDetails() {
+        log.info("Inside getStateDetails()");
+        return stateRepository.findAll().stream().map(state -> {
+            return new StateDTO(state.getId(), state.getStateName(), state.getCity());
+        }).collect(Collectors.toList());
     }
 }
