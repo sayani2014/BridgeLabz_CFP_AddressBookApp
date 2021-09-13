@@ -119,7 +119,7 @@ public class AddressBookService implements IAddressBookService{
     public AddressBookDTO updateAddressDetails(int id, AddressBookDTO addressBookDTO) {
         log.info("Inside updateAddressDetails()");
         AddressBookInfo addressBookDetails = findAddressBookById(id);
-        String[] ignoreFields = {"id", "name", "createdDate"};
+        String[] ignoreFields = {"id", "name", "phoneNo", "createdDate"};
         BeanUtils.copyProperties(addressBookDTO, addressBookDetails, ignoreFields);
         addressBookRepository.save(addressBookDetails);
 
